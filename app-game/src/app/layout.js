@@ -1,4 +1,6 @@
 import './globals.css'
+import FontHeader from './components/FontHeader'
+
 
 
 export const metadata = {
@@ -9,14 +11,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body> <header className=''>
-        
-        <h1>JOGO DA MEMORIA</h1>
-        <div>
-          <h1>LOGOUT</h1>
-          <h1>SOBRE</h1>
-        </div>
-      </header></body>
+      <body>
+        <header className=''>
+
+
+          <div className='flex bg-black p-3 justify-between'>
+            <FontHeader texto="JOGO DA MEMÓRIA" />
+            <div className='flex gap-3'>
+              <FontHeader texto="LOGOUT" />
+              <FontHeader texto="SOBRE" />
+            </div>
+          </div>
+        </header>
+        <main>
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
