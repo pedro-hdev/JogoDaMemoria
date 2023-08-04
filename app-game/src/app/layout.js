@@ -1,5 +1,5 @@
 import './globals.css'
-import FontHeader from './components/FontHeader'
+import Menu from '@/components/menu'
 
 
 
@@ -11,17 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body>
-        <header className=''>
+      <body className='bg-[#3A3A3A]'>
+        <header>
+        <Menu logolink={""} logo={"JOGO DA MEMÓRIA"} textolink1={""} texto1={"LOGOUT"} textolink2={""} texto2={"SOBRE"}></Menu>
 
-
-          <div className='flex bg-black p-3 justify-between'>
-            <FontHeader texto="JOGO DA MEMÓRIA" />
-            <div className='flex gap-3'>
-              <FontHeader texto="LOGOUT" />
-              <FontHeader texto="SOBRE" />
-            </div>
-          </div>
+        
         </header>
         <main>
           {children}
