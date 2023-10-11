@@ -1,5 +1,4 @@
 import "./globals.css";
-import Menu from "@/components/menu";
 
 export const metadata = {
   title: "Jogo Da Memoria",
@@ -9,18 +8,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className="bg-[#3A3A3A]">
-        <header>
-          <Menu
-            logolink="/"
-            logo="JOGO DA MEMÓRIA"
-            textolink1=""
-            texto1="LOGOUT"
-            textolink2=""
-            texto2="SOBRE"
-          />
-        </header>
-        <main>{children}</main>
+      <body className="bg-[#3A3A3A] h-full">
+
+        <main className="h-full">{children}</main>
       </body>
     </html>
   );
