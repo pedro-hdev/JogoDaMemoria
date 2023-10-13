@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Buttonsidebar from "./buttonsidebar";
 
-function Sidebar() {
+function Sidebar({ player, buttonElements, error }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -23,7 +22,7 @@ function Sidebar() {
       <div className="flex text-[24px] p-[20px] gap-[70px]">
         <h1>Erros</h1>
         <div className="rounded-full bg-[black] w-[39px] h-[39px] text-center">
-          <p className="text-[white]">1</p>
+          <p className="text-[white]">{error}</p>
         </div>
       </div>
       <hr />
@@ -50,10 +49,7 @@ function Sidebar() {
           ))}
         </tbody>
       </table>
-      <div className="flex flex-col gap-[20px] p-[10px]">
-        <Buttonsidebar texto="Mudar tema"></Buttonsidebar>
-        <Buttonsidebar texto="Reiniciar"></Buttonsidebar>
-      </div>
+      <div className="flex flex-col gap-[20px] p-[10px]">{buttonElements}</div>
     </div>
   );
 }
